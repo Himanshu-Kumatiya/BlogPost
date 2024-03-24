@@ -1,0 +1,33 @@
+const mongoose=require("mongoose");
+const blog=new mongoose.Schema({
+    userId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"User"
+    },
+    content:{
+        type:String,
+        required:true,
+    },
+     title:{
+        type:String,
+        required:true,
+        unique:true
+     },
+     image:{
+        type:String,
+        default:'https://www.salesforce.com/ca/blog/wp-content/uploads/sites/12/2023/10/anatomy-of-a-blog-post-deconstructed-open-graph.jpg'
+     },
+     category:[{
+        type:String,
+        unique:true
+     }],
+     comments:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Comment"
+     }],
+    likes:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"Like",
+    }]
+},{timestamps:true});
+module.exports=mongoose.model("Blog",blog);
