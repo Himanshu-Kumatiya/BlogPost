@@ -73,7 +73,7 @@ export default function Homeblog(){
             {userBlogs.map((blog,i) => (
                           
                               <Link to={`/blogs/blog/${blog._id}`}>
-                              <article key={i} className="flex w-[28vw] flex-col items-start justify-between rounded-[10px] p-[10px] hover:bg-[rgb(19,26,47)] ">
+                              <article key={i} className="flex w-[28vw] h-[500px] text-ellipsis overflow-hidden flex-col items-start justify-between rounded-[10px] p-[10px] hover:bg-[rgb(19,26,47)] ">
                                 <img src={blog.image} className='w-[28vw] h-[24vh] rounded-[10px]' alt="Nan" />
                                   <div className="mt-4 flex flex-row flex-wrap justify-between w-[26vw] items-center  gap-x-2">
                                       <div className="flex gap-2 text-[12px] leading-6">
@@ -100,7 +100,7 @@ export default function Homeblog(){
                                       <h3 className="mt-3 text-lg font-semibold leading-6  text-gray-500">
                                         {blog.title}
                                       </h3>
-                                      <div className='mt-2  text-[12px] leading-6 text-gray-500' dangerouslySetInnerHTML={{ __html: blog && (blog.content.slice(0,400)+'...') }}>
+                                      <div className='mt-2  text-[12px] leading-6 text-gray-500' dangerouslySetInnerHTML={{ __html: blog && (blog.content+'...') }}>
                                         </div>
 
                                   </div>

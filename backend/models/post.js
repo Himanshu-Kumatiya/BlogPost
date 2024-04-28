@@ -19,15 +19,13 @@ const blog=new mongoose.Schema({
      },
      category:[{
         type:String,
-        unique:true
      }],
      comments:[{
         type:mongoose.Schema.Types.ObjectId,
         ref:"Comment"
      }],
-    likes:[{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"Like",
-    }]
-},{timestamps:true});
+    likes:{
+        type:Array,
+        default:[]
+    }},{timestamps:true});
 module.exports=mongoose.model("Blog",blog);
