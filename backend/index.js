@@ -5,9 +5,9 @@ require("dotenv").config;
 const router=require("./routes/route");
 const cookieParser = require("cookie-parser");
 const path=require("path");
+const __dirname=path.resolve();
 app.use(express.json());
 app.use(cookieParser());
-const __dirname=path.resolve();
 app.use("/api/v1",router);
 connectDB();
 
