@@ -7,10 +7,10 @@ const cookieParser = require("cookie-parser");
 const path=require("path");
 app.use(express.json());
 app.use(cookieParser());
+const __dirname=path.resolve();
 app.use("/api/v1",router);
 connectDB();
 
-const __dirname=path.resolve();
 app.use(express.static(path.join(__dirname,'front-end/build')));
 app.get('*',(req,res)=>{
     res.sendFile(path.join(__dirname,'front-end','build','index.html'));
