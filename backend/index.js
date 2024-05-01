@@ -4,10 +4,17 @@ const connectDB=require("./config/database");
 require("dotenv").config;
 const router=require("./routes/route");
 const cookieParser = require("cookie-parser");
+const path=require("path");
 app.use(express.json());
 app.use(cookieParser());
 app.use("/api/v1",router);
 connectDB();
+
+const __dirname=path.resolve();
+app.use(express.static(path.join(__dirname,'front-end/build')));
+app.get('*',(req,res)=>{
+    res.sendFile(path.join(__dirname,'front-end','build','index.html'));
+});
 // const bodyParser=require("body-parser");
 var cors = require("cors");
 // app.use(bodyParser.json());
