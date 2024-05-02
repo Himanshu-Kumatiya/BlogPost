@@ -5,15 +5,15 @@ require("dotenv").config;
 const router=require("./routes/route");
 const cookieParser = require("cookie-parser");
 const path=require("path");
-const __dirname=path.resolve();
+const dirname=path.resolve();
 app.use(express.json());
 app.use(cookieParser());
 app.use("/api/v1",router);
 connectDB();
 
-app.use(express.static(path.join(__dirname,'front-end/build')));
+app.use(express.static(path.join(dirname,'front-end/build')));
 app.get('*',(req,res)=>{
-    res.sendFile(path.join(__dirname,'front-end','build','index.html'));
+    res.sendFile(path.join(dirname,'front-end','build','index.html'));
 });
 // const bodyParser=require("body-parser");
 var cors = require("cors");
