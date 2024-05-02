@@ -14,7 +14,7 @@ export default function Homeblog(){
   useEffect(() => {
     const fetchD=async () => {
       try {
-        const Response = await fetch(`${process.env.REACT_APP_BASE_URL}/getBlogs`);
+        const Response = await fetch(`/getBlogs`);
         //console.log(Response);
         if(Response.status == 200){
           Response.json().then((res) => {
@@ -41,7 +41,7 @@ export default function Homeblog(){
   const handleShowMore=async ()=>{
     const startIndex=userBlogs.length;
     try {
-      const Response = await fetch(`${process.env.REACT_APP_BASE_URL}/getBlogs?startIndex=${startIndex}`);
+      const Response = await fetch(`/getBlogs?startIndex=${startIndex}`);
       //console.log(Response);
       if (Response.status == 200){
         Response.json().then((res) => {
