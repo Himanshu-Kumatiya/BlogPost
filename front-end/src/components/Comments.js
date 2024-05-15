@@ -50,6 +50,7 @@ const Comments = ({blogId}) => {
     };
     useEffect(() => {
         console.log(blogId);
+        
         const fetchB = async () => {
             try {
                 setLoading(true);
@@ -66,13 +67,17 @@ const Comments = ({blogId}) => {
             }
             catch (err) {
                 setLoading(false);
-                toast.error("fail to fetch");
-                console.log(err);
+                //toast.error("You need to Sign-In ");
+                //console.log(err);
                 setCommentError(err.message);
             }
 
         }
-        fetchB();
+        if(currentUser)
+        {
+            fetchB();
+        }
+        
     }, [blogId]);
     const handleDeleteComment = async () => {
         setShowModal(false);

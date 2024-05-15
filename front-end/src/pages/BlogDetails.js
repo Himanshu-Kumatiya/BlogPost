@@ -31,7 +31,7 @@ const BlogDetails = () => {
                 if (res.status === 200) {
                     setBlog(data.blogs[0]);
                     setError(false);
-                    if(data.blogs[0].likes.indexOf(currentUser._id)===-1)
+                    if(currentUser && data.blogs[0].likes.indexOf(currentUser._id)===-1)
                     {
                         setLike(false);
                         setLikes(data.blogs[0].likes.length);
@@ -146,7 +146,7 @@ const BlogDetails = () => {
                             ))
                         }
                         </div>
-                        <div className='mt-[28px] mx-auto w-full post-content' dangerouslySetInnerHTML={{ __html: blog && blog.content }}>
+                        <div className='mt-[28px] mx-auto  post-content' dangerouslySetInnerHTML={{ __html: blog && blog.content }}>
                         </div>
                     </article>
                     <Comments blogId={blog._id} />

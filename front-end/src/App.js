@@ -14,7 +14,7 @@ import Search from "./components/Search";
 import About from "./components/About";
 function App() {
   return (
-    <div className="flex flex-col flex-wrap dark bg-[rgb(16,23,42)] text-gray-200">
+    <div className="flex flex-col flex-wrap dark bg-[rgb(16,23,42)] text-gray-200 ">
       <NavbarC/>
       <Routes>
       <Route path="/"  element={<Home/>}/>

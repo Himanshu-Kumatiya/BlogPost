@@ -31,15 +31,15 @@ const NavbarC = () => {
         navigate(`/search?${searchQuery}`);
     };
     return (
-        <Navbar className="border-b-1 " >
+        <Navbar className="border-b-1 flex flex-wrap w-full " >
 
             <h1 className='text-[24px] font-bold '><Link to="/"><span className='text-[rgb(101,217,182)]'>Blog</span><span className='text-sky-400'>Post</span></Link></h1>
-            <form onSubmit={handleSubmit}>
+            <form className='md:w-[190px] w-[120px]' onSubmit={handleSubmit}>
                 <TextInput
                     type='text'
                     placeholder='Search...'
                     rightIcon={AiOutlineSearch}
-                    className='lg:inline'
+                    className='lg:inline '
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                 />

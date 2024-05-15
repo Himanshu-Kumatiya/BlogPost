@@ -54,8 +54,8 @@ const OAuth = () => {
   }
   return (
     < div className='flex flex-row border  justify-center items-center border-sky-500  shadow-lg p-[4px] rounded-[10px] ' onClick={()=>{handleGoogleAuth()}}>
-      <span className="text-sky-500"> <pre>Continue with </pre>  </span>
-      <AiFillGoogleCircle className=' h-4 w-4 text-black'></AiFillGoogleCircle >
+      <span className="text-sky-500 text-[14px]"> <pre>Continue with </pre>  </span>
+      <AiFillGoogleCircle className=' h-4 w-4 '></AiFillGoogleCircle >
     </div>
   )
 }

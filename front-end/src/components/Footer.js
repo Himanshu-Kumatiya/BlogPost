@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { BsFacebook, BsInstagram, BsTwitter, BsGithub, BsDribbble } from 'react-icons/bs';
 export default function FooterC() {
   return (
-    <div>
     <Footer container className='border border-t-8 mt-[20px]  border-teal-500 '>
       <div className='w-full max-w-7xl mx-auto'>
         <div className='grid w-full justify-between sm:flex md:grid-cols-1'>
@@ -54,6 +53,5 @@ export default function FooterC() {
         </div>
       </div>
     </Footer>
-    </div>
   );
 }

@@ -48,9 +48,9 @@ const RegisterPage = () =>{
     }
     return (
       <div className='flex flex-wrap justify-center  place-items-center min-h-screen w-[98vw] mt-2 border-box '>
-        <div className='flex text-[1vw] gap-[40px] rounded-[20px] shadow-lg  p-[30px] place-items-center box-border w-[40vw]  flex-col'>
-          <h1 className='font-[700] text-[4vw] text-[rgb(101,217,182)]'>Register</h1>
-          <form className='flex  flex-col gap-4 w-[30vw]' onSubmit={handleSubmit(register)}>
+        <div className='flex md:text-[25px] text-[20px] gap-[40px] rounded-[20px] shadow-lg  p-[30px] place-items-center box-border w-[70vw]  flex-col'>
+          <h1 className='font-[700] md:text-[52px] text-[42px] text-[rgb(101,217,182)]'>Register</h1>
+          <form className='flex  flex-col gap-4 md:w-[30vw]' onSubmit={handleSubmit(register)}>
           <div className='text-gray-400'>
                 <label id='email' >Enter your Name</label>
                 <TextInput 
@@ -87,9 +87,9 @@ const RegisterPage = () =>{
             <div className='flex place-items-center flex-col gap-2  '>
   
               <Button type='submit' gradientDuoTone="greenToBlue">Signup</Button>
-              <div className='text-black text-[10px]'>OR</div>
-              <NavLink to="/login"><button className='border w-full  text-sky-500 border-sky-500 shadow-lg p-[4px] rounded-[10px] ' >Already have an account</button></NavLink>
-              <OAuth />
+              <div className='text-gray-500 text-[12px]'>OR</div>
+              <NavLink to="/login"><button className='border w-full text-[14px] text-sky-500 border-sky-500 shadow-lg p-[4px] rounded-[10px] ' >Already have an account</button></NavLink>
+              <button><OAuth /></button>
             </div>
           </form>
   

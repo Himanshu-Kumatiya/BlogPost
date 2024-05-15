@@ -198,7 +198,7 @@ const CreateBlog = () => {
         <ReactQuill
           theme='snow'
           placeholder='Write something...'
-          className='h-72 mb-12'
+          className='h-72 mb-12 '
           required
           onChange={(value) => {
             setFormData({ ...formData, content: value });

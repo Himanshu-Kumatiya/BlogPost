@@ -53,7 +53,8 @@ exports.getBlogs = async (req, res) => {
               }),
         }).sort({ updatedAt: 1 }).skip(startIndex).limit(limit).populate("userId").exec();
         //const user=await User.find({_id: savedPost.userId})
-        console.log("fetched blog",savedPost);
+        //console.log("fetched blog",savedPost);
+        //res.setHeader('Access-Control-Allow-Origin', '*');
         res.status(200).json({
             success: true,
             blogs: savedPost,

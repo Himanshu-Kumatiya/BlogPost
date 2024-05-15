@@ -75,10 +75,13 @@ function Search(){
         userBlogs.length > 0 ? (<>
             {userBlogs.map((blog,i) => (
                           
-                              <Link to={`/blogs/blog/${blog._id}`}>
-                              <article key={i} className="flex w-[28vw] flex-col items-start justify-between rounded-[10px] p-[10px] hover:bg-[rgb(19,26,47)] ">
-                                <img src={blog.image} className='w-[28vw] h-[24vh] rounded-[10px]' alt="Nan" />
-                                  <div className="mt-4 flex flex-row flex-wrap justify-between w-[26vw] items-center  gap-x-2">
+                              <Link key={i} to={`/blogs/blog/${blog._id}`}>
+                              <article  className="flex md:w-[320px] w-[280px] flex-col  justify-between rounded-[10px] p-[10px] hover:bg-[rgb(19,26,47)] ">
+                                <div className='flex justify-center'>
+                                <img src={blog.image} className=' w-[250px] h-[250px] md:w-[300px] md:h-[300px]   rounded-[10px]' alt="Nan" />
+                                </div>
+                               
+                                  <div className="mt-4 flex flex-row flex-wrap justify-between  gap-x-2">
                                       <div className="flex gap-2 text-[12px] leading-6">
                                       <img src={blog.userId.photo} alt="" className="h-6 w-6 rounded-full " />
                                         <span className=''> {blog.userId.name}</span>   
@@ -103,7 +106,7 @@ function Search(){
                                       <h3 className="mt-3 text-lg font-semibold leading-6  text-gray-500">
                                         {blog.title}
                                       </h3>
-                                      <div className='mt-2  text-[12px] leading-6 text-gray-500' dangerouslySetInnerHTML={{ __html: blog && (blog.content.slice(0,400)+'...') }}>
+                                      <div className='mt-2 h-[100px]   text-[12px] overflow-hidden leading-6 text-gray-500' dangerouslySetInnerHTML={{ __html: blog && (blog.content+'...') }}>
                                         </div>
 
                                   </div>
@@ -121,7 +124,7 @@ function Search(){
             </button>
           )}
         </>) : (
-        <div className="flex w-[98vw] mt-10 justify-center">
+        <div className="flex w-[98vw] h:[98vh] mt-10 justify-center">
             <span>No Blog Found</span>
         </div>
         )

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import {Button} from "flowbite-react"
 const Home = () => {
   return (
-    <div>
+    <div className='w-full'>
       <div className='flex justify-center items-center flex-col m-4 mt-[20vh]'>
       <p className='text-center flex-col text-[30px]'>
         Share your thoughts through the canvas of BlogPost
