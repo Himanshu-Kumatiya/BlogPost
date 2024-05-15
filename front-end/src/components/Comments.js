@@ -123,7 +123,7 @@ const Comments = ({blogId}) => {
                 )}
                 {currentUser && (
                     <form
-                        onSubmit={handleSubmit}
+                        onSubmit={()=>handleSubmit()}
                         className='border border-teal-500 rounded-md p-3'
                     >
                         <Textarea

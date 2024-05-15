@@ -85,12 +85,12 @@ const BlogDetails = () => {
     };
 
     return (
-        loading ? (<div className="flex w-[98vw] mt-10 justify-center">
+        loading ? (<div className="flex w-[98vw] h-[90vh] mt-10 justify-center">
             <Spinner size='xl' />
         </div>) :
             (<div className="flex w-[98vw] mt-10 justify-center ">
                 <div className="flex justify-center flex-col">
-                    <article className="flex w-[70vw] flex-col ">
+                    <article className="flex w-[80vw] flex-col ">
                         <div className='flex flex-row justify-between'>
                             <p className="mt-3 text-[25px] font-bold leading-6  group-hover:text-gray-600">
                                 {blog.title}
